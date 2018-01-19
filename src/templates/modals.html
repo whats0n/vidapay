@@ -1,0 +1,43 @@
+---
+title: 'VidaPay Payment'
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<ul class="modals-list">
+		<li><a data-modal-control="service-plan">Service plan</a></li>
+	</ul>
+
+	<div class="v-modal" data-modal="service-plan">
+		<div class="v-modal__container" data-modal-container>
+			<div class="v-modal-content">
+				<div class="v-modal-content__header">
+					<button class="v-modal-content__close" data-modal-close>
+						<i class="icon icon-close"></i>
+					</button>
+					<h2 class="v-modal-content__title">Choose Service plan for Activation product</h2>
+				</div>
+				<div class="v-modal-content__body">
+					<ul class="v-modal-content__list">
+						{% for item in [
+							{ title: 'Test 2 | Default', attrs: 'checked' },
+							{ title: 'Test | Default' }
+						] %}
+							<li class="v-modal-content__item">
+								<label class="radio">
+									<input type="radio" name="service-plan" {{item.attrs | safe}}>
+									<span class="radio__icon"></span>
+									<span class="radio__content">{{item.title}}</span>
+								</label>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="v-modal-content__footer">
+					<button class="btn" data-modal-close>OK</button>
+					<button class="btn btn_red" data-modal-close>Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}	

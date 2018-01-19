@@ -1,0 +1,21 @@
+.btn 
+	position: relative
+	overflow: hidden
+	display: inline-block
+	vertical-align: top
+	padding: 0 15px
+	min-width: 120px
+	color: $white
+	background: $blue
+	+f(19px, 300, 60px)
+	text-align: center
+	text-decoration: none
+	cursor: pointer
+	transition: opacity .175s, background .175s, box-shadow .175s
+	&:active
+		background: darken($blue, 10%)
+		box-shadow: inset 2px 2px 6px rgba(0,0,0,.2)
+	&_red
+		background: #ec4a41
+		&:active
+			background: darken(#ec4a41, 10%)
