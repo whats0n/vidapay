@@ -1,0 +1,28 @@
+.header
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	color: $white
+	background: $blue
+	text-align: center
+	&__title
+		+f(22px, 500, 50px)
+	&__back
+		position: absolute
+		top: 0
+		left: 0
+		padding: 0 20px
+		height: 50px
+		color: $white
+		background: none
+		+vertical
+		span,
+		i 
+			display: inline-block
+			vertical-align: middle
+		span 
+			+f(16px, 400, 1)
+		i 
+			margin-right: 10px
+			+f(16px, null, 1)
